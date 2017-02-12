@@ -3,8 +3,47 @@
 <head>
 	<meta charset="UTF-8">
 	<title>PHP Form</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="main.css">
 </head>
 <body>
+
+<div class="container">
+<div class="col-xs-12 col-sm-6 col-sm-offset-3 margin-top">
+	<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+	    <div class="form-area">  
+
+	        <form id="form" role="form" onsubmit="submitForm(); return false;">
+	        <br style="clear:both">
+	                <h3 style="margin-bottom: 25px; text-align: center;">Contact Form</h3>
+					<div class="form-group">
+						<input type="text" class="form-control" id="first-name" name="first-name" placeholder="First Name" required>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="last-name" name="last-name" placeholder="Last Name" required>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="company-name" name="company-name" placeholder="Company Name" required>
+					</div>
+	                <div class="form-group">
+	                <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
+	                    <span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>                    
+	                </div>
+	            
+	        <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Submit Form <span id="status"></span></button>
+	        </form>
+
+	    </div>
+	</div>
+</div>
+</div>
 	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="main.js"></script>
 </body>
 </html>
